@@ -233,7 +233,7 @@ def buildModelRegression(request):
     print(gbScore, gb)
     # print model
     # print resAcc
-    resAccJson = {'result': resAcc}
+    resAccJson = {'result': [resAcc, rfScore, gbScore, lrScore]}
     print("Result accuracy regression: ", resAccJson);
     f = open(os.path.join(path,modelName)+'.pickle', 'wb')
     pickle.dump(model, f)
